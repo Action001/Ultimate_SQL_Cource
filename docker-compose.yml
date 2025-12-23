@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # 1. Microsoft SQL Server
+  mssql:
+    container_name: sql-course-mssql
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=SuperStrongPwd123! # Пароль администратора (sa)
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    restart: always
+
+  # 2. PostgreSQL
+  postgres:
+    container_name: sql-course-postgres
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres # Пароль администратора
+      - POSTGRES_DB=kino_db       # База создастся автоматически
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  mssql_data:
+  postgres_data:

@@ -1,0 +1,25 @@
+# Docker
+mssql_data/
+postgres_data/
+.env
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+.cursor/
+*.suo
+*.ntvs
+*.njsproj
+*.sln
+*.swp
+
+# Logs
+*.log
+
