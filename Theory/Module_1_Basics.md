@@ -38,3 +38,4 @@ SELECT column1, column2 FROM table_name;
 
 **Важно:** Любое сравнение с NULL (`= NULL`, `> NULL`) возвращает `UNKNOWN` (ложь). Используйте только `IS NULL`.
 
+![NULL explanation](../images/NULL.jpg)
