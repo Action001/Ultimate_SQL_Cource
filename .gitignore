@@ -1,4 +1,4 @@
-# Docker
+﻿# Docker
 mssql_data/
 postgres_data/
 .env
@@ -22,4 +22,3 @@ Desktop.ini
 
 # Logs
 *.log
-

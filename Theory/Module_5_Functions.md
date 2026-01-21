@@ -19,19 +19,22 @@ END
 
 **Microsoft SQL Server:**
 *   `GETDATE()` — текущее время.
-*   `DATEADD(part, number, date)` — прибавить время.
-*   `DATEDIFF(part, start, end)` — разница дат.
+*   `DATEADD(day, 7, date)` — прибавить 7 дней (можно year, month, day).
+*   `DATEDIFF(day, start, end)` — разница в днях (или year, month).
 *   `YEAR(date)`, `MONTH(date)` — извлечение части.
 
 **PostgreSQL:**
-*   `CURRENT_TIMESTAMP` или `NOW()`.
-*   `date + interval '1 day'` — арифметика.
-*   `AGE(end, start)` — разница.
+*   `CURRENT_DATE` — текущая дата.
+*   `date + interval '7 days'` — арифметика.
+*   `date1 - date2` — разница в днях (возвращает целое число).
+*   `AGE(end, start)` — разница в годах/месяцах/днях.
 *   `EXTRACT(year FROM date)` — извлечение.
 
 ## 5.3. Строковые функции
 *   `LEN` (MSSQL) / `LENGTH` (Postgres) — длина строки.
+*   `LEFT(str, n)`, `RIGHT(str, n)` — взять n символов слева/справа.
 *   `UPPER`, `LOWER` — регистр.
-*   `SUBSTRING` — часть строки.
+*   `SUBSTRING(str, start, len)` — часть строки.
+*   `CHARINDEX(sub, str)` (MSSQL) / `POSITION(sub IN str)` (Postgres) — поиск подстроки.
 *   `CONCAT` (или `+` / `||`) — склеивание строк.
 
